@@ -1,0 +1,18 @@
+.btn {
+  background: white;
+  .rounded(7px);
+  padding: 0.5em;
+  cursor: crosshair;
+  &:hover {
+    background: #ccc;
+  }
+}
+
+[type="checkbox"] {
+  display: none;
+  &:checked {
+    & + #main-wrapper {
+      display: block;
+    }
+  }
+}
