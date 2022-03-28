@@ -5,7 +5,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
     $email = mysqli_real_escape_string($db, htmlspecialchars($_POST['email']));
-    $password = mysqli_real_escape_string($db, htmlspecialchars($_POST['password']));
+    $password = md5(mysqli_real_escape_string($db, htmlspecialchars($_POST['password'])));
 
     if ($email !== "" && $password !== "") {
         $requete = "SELECT count(*) FROM user where 

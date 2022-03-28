@@ -28,7 +28,7 @@
 
         <body class="align">
             <div class="grid">
-                <form action="../connexion.php" method="POST" class="form login">
+                <form action="../inscription.php" method="POST" class="form login">
                     <div class="form__field">
                         <label for="email"><svg class="icon">
                                 <use xlink:href="#icon-user"></use>
@@ -44,12 +44,12 @@
                     </div>
 
                     <div class="form__field">
-                        <input type="submit" name="connexion" value="Me connecter" />
+                        <input type="submit" name="connexion" value="Je m'inscris" />
                     </div>
                 </form>
 
                 <p class="text--center">
-                    Vous n'êtes pas encore inscrit ? <br><a href="sign-in.php">S'inscrire maintenant</a>
+                    Vous êtes déjà inscrit ? <br><a href="login.php">Se connecter</a>
                     <svg class="icon">
                         <use xlink:href="#icon-arrow-right"></use>
                     </svg>

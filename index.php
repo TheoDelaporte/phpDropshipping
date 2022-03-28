@@ -29,18 +29,20 @@
         <a class="menu-link is-active" href="#">Textile</a>
         <a class="menu-link notify" href="#">Déco</a>
         <a class="menu-link" href="pages/informatique.php">Informatique</a>
-        <a class="menu-link notify" href="#">Autre</a>
+        <a class="menu-link notify" href="pages/a-propos.php">Nous contacter</a>
       </div>
       <div class="search-bar">
         <input type="text" placeholder="Search" />
       </div>
+
+
       <!-- tester si l'utilisateur est connecté -->
       <?php
       session_start();
-      if ($_SESSION['email'] !== "") { ?>
+      if (isset($_SESSION['email'])) { ?>
         <div class="header-profile">
           <?php echo $_SESSION['email']; ?>
-          <a href="#">
+          <a href="pages/mon-compte.php">
             <img class="profile-img" src="img/moncompte2.png" alt="" />
           </a>
         </div>
@@ -51,6 +53,8 @@
           </a>
         </div>
       <?php } ?>
+
+
     </div>
     <div class="wrapper">
       <div class="main-container">
