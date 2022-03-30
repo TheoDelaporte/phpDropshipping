@@ -25,7 +25,7 @@ if (isset($_POST['email'], $_POST['password'])) { //l'utilisateur à cliqué sur
             } else {
                 $_SESSION['email'] = mysqli_real_escape_string($db, htmlspecialchars($_POST['email']));
                 echo "<script>
-                window.location.href='index.php';
+                window.location.href='pages/login.php';
                 alert('Vous êtes inscrit avec succès !');
                 </script>";
             }
