@@ -25,9 +25,9 @@
     <div class="header">
 
       <div class="header-menu">
-        <a class="menu-link is-active" href="#">Textile</a>
-        <a class="menu-link notify" href="#">Technologie</a>
-        <a class="menu-link" href="#">Déco</a>
+        <a class="menu-link is-active" href="pages/catalogue-technologie.php">Technologie</a>
+        <a class="menu-link notify" href="pages/catalogue-deco.php">Déco</a>
+        <a class="menu-link" href="pages/catalogue-textile.php">Textile</a>
         <a class="menu-link notify" href="pages/a-propos.php">Nous contacter</a>
       </div>
       <div class="search-bar">
