@@ -81,7 +81,7 @@ include "../skeleton/backgroundvideo.php";
                 </form>
 
             </div>
-            <div class="card" style="width: 50%; background-color: rgba(134, 140, 160, 0.3); ">
+            <div class="card md-2" style="width: 50%; background-color: rgba(134, 140, 160, 0.3); ">
             </div>
         </div>
         <a class="menu-link notify" href="../deconnexion.php">
