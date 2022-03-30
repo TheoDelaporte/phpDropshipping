@@ -1,10 +1,7 @@
 <?php
-if (isset($_POST['submit'])) {
-  $idProduit = $_POST['submit'];
+if (isset($_GET['submit'])) {
+  $idProduit = $_GET['submit'];
   $quantity = 1;
-  // echo $idProduit;
-  // echo '<br>';
-  // echo $quantity;
 }
 require 'vendor/autoload.php';
 // This is your test secret API key.
