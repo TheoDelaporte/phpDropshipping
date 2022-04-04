@@ -69,6 +69,7 @@ include "../skeleton/backgroundvideo.php";
                         </div>
                         <div class="app-card-buttons">
                             <form action="../stripe-checkout/create-checkout-session.php" method="GET">
+                                <input type="hidden" name="email" value="<?= $_SESSION['email'] ?>" />
                                 <button type="submit" class="content-button status-button" name="submit" value="<?= $produit['idProduit'] ?>">Commander</button>
                             </form>
                             <form action="produit.php" method="GET">

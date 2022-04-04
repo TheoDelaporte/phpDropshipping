@@ -50,9 +50,27 @@
             <img class="profile-img" src="img/moncompte.png" alt="" />
           </a>
         </div>
-      <?php } ?>
+        <?php }
+      $url = $_SERVER['SCRIPT_NAME'];
+      if ($url !== '/pages/login.php') {
+        if ($url !== '/pages/sign-in.php') {
+        ?>
+          <ul class="navbar-right">
+            <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i><span class="badge">3</span></a></li>
+          </ul>
+      <?php
+        }
+      }
+      ?>
 
     </div>
+    <?php
+    if ($url !== '/pages/login.php') {
+      if ($url !== '/pages/sign-in.php') {
+        include 'pages/panier.php';
+      }
+    }
+    ?>
     <div class="wrapper">
 
       <div class="main-container">

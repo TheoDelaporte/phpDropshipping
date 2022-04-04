@@ -19,4 +19,5 @@ try {
 }
 
 // Masquer les erreurs deprecated qui correspondent à un avertissement si l'on passe sur une version php plus récente.
-error_reporting(E_ALL ^ E_DEPRECATED);
+// error_reporting(E_ALL ^ E_DEPRECATED);
+error_reporting(0);

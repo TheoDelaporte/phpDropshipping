@@ -12,7 +12,9 @@
     <div class="header-profile">
         <!-- tester si l'utilisateur est connecté -->
         <?php
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
         if (isset($_SESSION['email'])) { ?>
             <div class="header-profile">
                 <div style="color: black;"><?= $_SESSION['email']; ?></div>
@@ -26,7 +28,25 @@
                     <img class="profile-img" src="../img/moncompte.png" alt="" />
                 </a>
             </div>
-        <?php } ?>
-
+            <?php }
+        $url = $_SERVER['SCRIPT_NAME'];
+        if ($url !== '/pages/login.php') {
+            if ($url !== '/pages/sign-in.php') {
+            ?>
+                <ul class="navbar-right">
+                    <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i><span class="badge">3</span></a></li>
+                </ul>
+        <?php
+            }
+        }
+        ?>
     </div>
 </div>
+
+<?php
+if ($url !== '/pages/login.php') {
+    if ($url !== '/pages/sign-in.php') {
+        include '../pages/panier.php';
+    }
+}
+?>
