@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Mon compte</title>
+    <title>Produit</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css" />
@@ -66,6 +66,7 @@ include "../skeleton/backgroundvideo.php";
                 </div>
             </div>
             <div class="footer">
+                <a style='' href="panier.php?action=ajout&amp;l=<?= $produit['libelleProduit'] ?>&amp;q=1&amp;p=<?= $produit['prixHT'] ?>">Ajouter au panier</a>
                 <button type="button">
                     <img src="http://co0kie.github.io/codepen/nike-product-page/cart.png" alt="">
                     <span>Ajouter au panier</span>
@@ -75,5 +76,3 @@ include "../skeleton/backgroundvideo.php";
         </div>
 
     </div>
-
-    <a href="https://www.youtube.com/watch?v=qGOxPVHfZuE" target="_blank" title="Watch me speed code this" style="position: fixed; bottom: 10px; right: 10px"><img src="http://co0kie.github.io/codepen/youtube.png" alt=""></a>
