@@ -17,7 +17,7 @@
         }
         if (isset($_SESSION['email'])) { ?>
             <div class="header-profile">
-                <div style="color: black;"><?= $_SESSION['email']; ?></div>
+                <div style="color: white;"><?= $_SESSION['email']; ?></div>
                 <a href="mon-compte.php">
                     <img class="profile-img" src="../img/moncompte2.png" alt="" />
                 </a>

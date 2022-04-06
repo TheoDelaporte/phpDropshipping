@@ -61,7 +61,7 @@ include "../skeleton/backgroundvideo.php";
             ?>
                 <div class="col-3">
                     <div class="app-card card md-2">
-                        <span>
+                        <span style="color: white;">
                             <?= $produit['libelleProduit'] ?>
                         </span>
                         <div class="app-card__subtext">

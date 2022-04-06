@@ -1,5 +1,6 @@
 <?php
 
+$email = 'theo.test@test.com';
 $idProduits = $_GET['id'];
 $array = explode(" ", $idProduits);
 $count = count($array) - 1;
@@ -89,21 +90,12 @@ header('Content-Type: application/json');
 $YOUR_DOMAIN = 'https://phpdropshipping.test/stripe-checkout/public';
 
 $checkout_session = \Stripe\Checkout\Session::create([
-  // 'customer_email' => isset($email),
+  'customer_email' => $email,
   'line_items' => [
     $data
-    // [
-    //   # Provide the exact Price ID (e.g. pr_1234) of the product you want to sell
-    //   'price' => $idProduit,
-    //   'quantity' => $quantity,
-    // ],
-    // [
-    //   'price' => $idProduit,
-    //   'quantity' => 2,
-    // ],
   ],
   'mode' => 'payment',
-  'success_url' => $YOUR_DOMAIN . '/success.html',
+  'success_url' => $YOUR_DOMAIN . '/success.php?id=' . $idProduits . '&q=' . $qte . '&mail=' . $email . '&prix=' . $_GET['prix'],
   'cancel_url' => $YOUR_DOMAIN . '/cancel.html',
 ]);
 

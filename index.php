@@ -39,7 +39,9 @@
       session_start();
       if (isset($_SESSION['email'])) { ?>
         <div class="header-profile">
-          <?php echo $_SESSION['email']; ?>
+          <div style="color: white;">
+            <?php echo $_SESSION['email']; ?>
+          </div>
           <a href="pages/mon-compte.php">
             <img class="profile-img" src="img/moncompte2.png" alt="" />
           </a>
