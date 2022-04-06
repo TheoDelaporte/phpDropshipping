@@ -59,7 +59,7 @@ include "../skeleton/backgroundvideo.php";
             foreach ($datas as $produit) {
                 $i++;
             ?>
-                <div class="col-3">
+                <div class="col-3 mb-3">
                     <div class="app-card card md-2">
                         <span style="color: white;">
                             <?= $produit['libelleProduit'] ?>
@@ -68,10 +68,7 @@ include "../skeleton/backgroundvideo.php";
                             <center><img src="../img/<?= $produit['imageProduit'] ?>" style="text-align:center;" height="150" width="150"></center>
                         </div>
                         <div class="app-card-buttons">
-                            <form action="../stripe-checkout/create-checkout-session.php" method="GET">
-                                <input type="hidden" name="email" value="<?= $_SESSION['email'] ?>" />
-                                <button type="submit" class="content-button status-button" name="submit" value="<?= $produit['idProduit'] ?>">Commander</button>
-                            </form>
+                            <a href="../stripe-checkout/create-checkout-session.php?submitDirect=<?= $produit['idProduit'] ?>&prix=<?= $produit['prixHT'] ?>&email=<?= $_SESSION['email'] ?>" class="content-button status-button">Commander</a>
                             <form action="produit.php" method="GET">
                                 <button type="submit" class="menu" name="produit" value="<?= $produit['idProduit'] ?>"></button>
                             </form>
