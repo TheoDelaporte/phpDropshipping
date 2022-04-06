@@ -415,7 +415,7 @@ body.light-mode .video-bg:before {
   display: flex;
   flex-direction: column;
   color: var(--theme-color);
-  padding: 20px 40px;
+  padding: 20px 100px;
   height: 100%;
   overflow: auto;
   background-color: var(--theme-bg-color);

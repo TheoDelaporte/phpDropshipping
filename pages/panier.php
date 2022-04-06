@@ -1,13 +1,14 @@
 <?php
-include "../confBd/config.php";
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 $url = $_SERVER['SCRIPT_NAME'];
 if ($url == '/index.php') {
     include_once("fonctions-panier.php");
+    include "confBd/config.php";
 } else {
     include_once("../fonctions-panier.php");
+    include "../confBd/config.php";
 }
 $erreur = false;
 
@@ -60,77 +61,84 @@ if (!$erreur) {
 }
 
 echo '<?xml version="1.0" encoding="utf-8"?>';
-
+$url = $_SERVER['SCRIPT_NAME'];
+if ($url == '/pages/panier.php') {
+    echo "<script>
+                window.location.href='../index.php';
+                alert('Votre produit a bien été ajouté !');
+                </script>";
+} else {
 ?>
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>CodePen - Shopping Cart Dropdown</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="../assets/panier/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <title>CodePen - Shopping Cart Dropdown</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel="stylesheet" href="../assets/panier/style.css">
 
-</head>
+    </head>
 
-<body class="bodyclass">
-    <form method="post" action="" style="margin:auto;">
+    <body class="bodyclass">
+        <form method="post" action="" style="margin:auto;">
 
 
-        <div class="container1">
-            <div class="shopping-cart">
-                <div class="shopping-cart-header">
-                    <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
-                    <div class="shopping-cart-total">
-                        <span class="lighter-text">Total:</span>
-                        <span class="main-color-text"><?= MontantGlobal() . ' €'; ?></span>
+            <div class="container1">
+                <div class="shopping-cart">
+                    <div class="shopping-cart-header">
+                        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                        <div class="shopping-cart-total">
+                            <span class="lighter-text">Total:</span>
+                            <span class="main-color-text"><?= MontantGlobal() . ' €'; ?></span>
+                        </div>
                     </div>
-                </div>
-                <!--end shopping-cart-header -->
+                    <!--end shopping-cart-header -->
 
-                <ul class="shopping-cart-items">
-                    <?php
-                    $stmt = $db_pdo->prepare("Select idProduit, imageProduit from produits where libelleProduit = :produit");
+                    <ul class="shopping-cart-items">
+                        <?php
+                        $stmt = $db_pdo->prepare("Select idProduit, imageProduit from produits where libelleProduit = :produit");
 
-                    $name = '';
-                    if (creationPanier()) {
-                        $nbArticles = count($_SESSION['panier']['libelleProduit']);
-                        if ($nbArticles <= 0)
-                            echo "<tr><td>Votre panier est vide </ td></tr>";
-                        else {
-                            for ($i = 0; $i < $nbArticles; $i++) {
-                                $stmt->bindParam(':produit', htmlspecialchars($_SESSION['panier']['libelleProduit'][$i]));
-                                $stmt->execute();
-                                $produit = $stmt->fetch(PDO::FETCH_ASSOC);
-                                $name .= $produit['idProduit'] . ' ';
-                                $qte .= htmlspecialchars($_SESSION['panier']['qteProduit'][$i]) . ' ';
-                    ?><li class="clearfix">
-                                    <img src="../img/<?= $produit['imageProduit'] ?>" alt="" style="width : 20%; height : 20%;" />
-                                    <span name="name" class="item-name"><?= htmlspecialchars($_SESSION['panier']['libelleProduit'][$i]); ?></span>
-                                    <span class="item-price"><?= htmlspecialchars($_SESSION['panier']['prixProduit'][$i]) . ' €'; ?></span>
-                                    <span class="item-quantity">Quantité : <?= "<input type=\"text\" size=\"4\" name=\"q[]\" value=\"" . htmlspecialchars($_SESSION['panier']['qteProduit'][$i]) . "\"/>" ?></span>
-                                </li>
+                        $name = '';
+                        if (creationPanier()) {
+                            $nbArticles = count($_SESSION['panier']['libelleProduit']);
+                            if ($nbArticles <= 0)
+                                echo "<tr><td>Votre panier est vide </ td></tr>";
+                            else {
+                                for ($i = 0; $i < $nbArticles; $i++) {
+                                    $stmt->bindParam(':produit', htmlspecialchars($_SESSION['panier']['libelleProduit'][$i]));
+                                    $stmt->execute();
+                                    $produit = $stmt->fetch(PDO::FETCH_ASSOC);
+                                    $name .= $produit['idProduit'] . ' ';
+                                    $qte .= htmlspecialchars($_SESSION['panier']['qteProduit'][$i]) . ' ';
+                        ?><li class="clearfix">
+                                        <img src="../img/<?= $produit['imageProduit'] ?>" alt="" style="width : 20%; height : 20%;" />
+                                        <span name="name" class="item-name"><?= htmlspecialchars($_SESSION['panier']['libelleProduit'][$i]); ?></span>
+                                        <span class="item-price"><?= htmlspecialchars($_SESSION['panier']['prixProduit'][$i]) . ' €'; ?></span>
+                                        <span class="item-quantity">Quantité : <?= "<input type=\"text\" size=\"4\" name=\"q[]\" value=\"" . htmlspecialchars($_SESSION['panier']['qteProduit'][$i]) . "\"/>" ?></span>
+                                    </li>
 
-                    <?php
+                        <?php
+                                }
+                                echo "<tr><td colspan=\"4\">";
+                                echo "<input type=\"submit\" class=\"button\" value=\"Mettre à jour la quantité\"/>";
+                                echo "<input type=\"hidden\" name=\"action\" value=\"refresh\"/>";
                             }
-                            echo "<tr><td colspan=\"4\">";
-                            echo "<input type=\"submit\" class=\"button\" value=\"Mettre à jour la quantité\"/>";
-                            echo "<input type=\"hidden\" name=\"action\" value=\"refresh\"/>";
                         }
-                    }
-                    ?>
+                        ?>
 
-                </ul>
-                <a href="../stripe-checkout/create-checkout-session-panier.php?id=<?= $name ?>&q=<?= $qte ?>" class="button">Checkout</a>
+                    </ul>
+                    <a href="../stripe-checkout/create-checkout-session-panier.php?id=<?= $name ?>&q=<?= $qte ?>&prix=<?= MontantGlobal() ?>" class="button">Commander</a>
 
+                </div>
+                <!--end shopping-cart -->
             </div>
-            <!--end shopping-cart -->
-        </div>
-        <!--end container -->
-        <!-- partial -->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="../assets/panier/script.js"></script>
+            <!--end container -->
+            <!-- partial -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src="../assets/panier/script.js"></script>
 
-</body>
+    </body>
 
-</html>
+    </html>
+<?php } ?>
