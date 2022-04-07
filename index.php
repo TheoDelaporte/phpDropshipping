@@ -21,9 +21,11 @@
     <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
    </div>-->
-  <div class="app" style="width:100%">
+  <div class="app" style="width:100%;">
     <div class="header">
-
+      <a href='index.php'>
+        <img class="" src="img/logo_clickshop.png" style="margin-right: 195px;" height="55" width="55" alt="">
+      </a>
       <div class="header-menu">
         <a class="menu-link is-active" href="pages/catalogue-technologie.php">Technologie</a>
         <a class="menu-link notify" href="pages/catalogue-deco.php">Déco</a>
@@ -42,7 +44,7 @@
           <div style="color: white;">
             <?php echo $_SESSION['email']; ?>
           </div>
-          <a href="pages/mon-compte.php">
+          <a href="pages/mon-compte.php?id=modifier">
             <img class="profile-img" src="img/moncompte2.png" alt="" />
           </a>
         </div>
@@ -58,7 +60,7 @@
         if ($url !== '/pages/sign-in.php') {
         ?>
           <ul class="navbar-right">
-            <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i><span class="badge">3</span></a></li>
+            <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i></a></li>
           </ul>
       <?php
         }

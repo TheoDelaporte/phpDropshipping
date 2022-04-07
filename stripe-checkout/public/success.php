@@ -6,7 +6,7 @@ $url = $_SERVER['SCRIPT_NAME'];
 $idCommande = rand();
 $email = $_GET['mail'];
 // $prixTotal = $_GET['prix'];
-$prixTotal = 10;
+$prixTotal = $_GET['prix'];
 $date = date("d-m-Y");
 $stmtCommande = $db_pdo->prepare("INSERT INTO commande (idCommande, mailClient, prixTotal, dateCommande)
 VALUES ($idCommande, '$email', $prixTotal, '$date')");
@@ -84,7 +84,6 @@ if ($count == 1) {
   VALUES ('$idCommande', '$idProduit[4]', '$qteProduit[4]')");
   $stmtDetailsCommande->execute();
 }
-$stmtDetailsCommande->execute();
 
 ?>
 <!DOCTYPE html>
@@ -99,7 +98,7 @@ $stmtDetailsCommande->execute();
   <section>
     <p>
       Paiement effectué !
-      <a href="../../index.php?url=<?= $url ?>">Retourner à l'accueil</a>.
+      <a href="../../index.php?url=success">Retourner à l'accueil</a>.
     </p>
   </section>
 </body>

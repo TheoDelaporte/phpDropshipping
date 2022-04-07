@@ -1,0 +1,50 @@
+.card {
+  max-width: 30%;
+  background-color: rgba(134, 140, 160, 0.3);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gridcompte {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 20rem;
+  margin-top: 2em;
+  margin-bottom: 3.5em;
+}
+
+.app-card-compte {
+  width: calc(40% - -200px);
+  font-size: 16px;
+  background-color: rgb(0 0 0 / 17%);
+  border-radius: 14px;
+  border: 1px solid var(--theme-bg-color);
+  padding: 20px;
+  transition: 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5.8em;
+  margin-bottom: 6.8em;
+}
+
+.container {
+  margin-left: -150px;
+}
+.bloc1 {
+  float: left;
+}
+.bloc2 {
+  float: right;
+}
+
+.br {
+  margin: 1em;
+}
+
+.form__f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+}

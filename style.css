@@ -133,7 +133,7 @@ body.light-mode .video-bg:before {
 
 .app {
   background-color: var(--theme-bg-color);
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   overflow: hidden;
   backdrop-filter: blur(20px);
@@ -149,7 +149,7 @@ body.light-mode .video-bg:before {
   height: 58px;
   width: 100%;
   border-bottom: 1px solid var(--border-color);
-  padding: 0 100px;
+  padding: 0 30px;
   white-space: nowrap;
 }
 @media screen and (max-width: 480px) {
@@ -196,7 +196,7 @@ body.light-mode .video-bg:before {
   background-color: #f96057;
   border-radius: 50%;
   box-shadow: 24px 0 0 0 #f8ce52, 48px 0 0 0 #5fcf65;
-  margin-right: 270px;
+  margin-right: 195px;
   flex-shrink: 0;
 }
 @media screen and (max-width: 945px) {

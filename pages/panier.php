@@ -87,7 +87,7 @@ if ($url == '/pages/panier.php') {
             <div class="container1">
                 <div class="shopping-cart">
                     <div class="shopping-cart-header">
-                        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"><?= compterArticles() ?></span>
                         <div class="shopping-cart-total">
                             <span class="lighter-text">Total:</span>
                             <span class="main-color-text"><?= MontantGlobal() . ' €'; ?></span>
@@ -106,6 +106,10 @@ if ($url == '/pages/panier.php') {
                                 echo "<tr><td>Votre panier est vide </ td></tr>";
                             else {
                                 for ($i = 0; $i < $nbArticles; $i++) {
+                                    if ($_GET['url'] == 'success') {
+                                        supprimerArticle(htmlspecialchars($_SESSION['panier']['libelleProduit'][$i]));
+                                        header('Refresh');
+                                    }
                                     $stmt->bindParam(':produit', htmlspecialchars($_SESSION['panier']['libelleProduit'][$i]));
                                     $stmt->execute();
                                     $produit = $stmt->fetch(PDO::FETCH_ASSOC);
