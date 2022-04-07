@@ -1,5 +1,7 @@
 <div class="header">
-    <div class="menu-circle"></div>
+    <a href='../index.php'>
+        <img class="" src="../img/logo_clickshop.png" style="margin-right: 195px;" height="55" width="55" alt="">
+    </a>
     <div class="header-menu">
         <a class="menu-link" href="catalogue-technologie.php">Technologie</a>
         <a class="menu-link notify" href="catalogue-deco.php">Déco</a>
@@ -18,7 +20,7 @@
         if (isset($_SESSION['email'])) { ?>
             <div class="header-profile">
                 <div style="color: white;"><?= $_SESSION['email']; ?></div>
-                <a href="mon-compte.php">
+                <a href="mon-compte.php?id=modifier">
                     <img class="profile-img" src="../img/moncompte2.png" alt="" />
                 </a>
             </div>
@@ -32,11 +34,13 @@
         $url = $_SERVER['SCRIPT_NAME'];
         if ($url !== '/pages/login.php') {
             if ($url !== '/pages/sign-in.php') {
+                if ($url !== '/pages/mon-compte.php') {
             ?>
-                <ul class="navbar-right">
-                    <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i><span class="badge">3</span></a></li>
-                </ul>
+                    <ul class="navbar-right">
+                        <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
         <?php
+                }
             }
         }
         ?>
@@ -46,7 +50,9 @@
 <?php
 if ($url !== '/pages/login.php') {
     if ($url !== '/pages/sign-in.php') {
-        include '../pages/panier.php';
+        if ($url !== '/pages/mon-compte.php') {
+            include '../pages/panier.php';
+        }
     }
 }
 ?>

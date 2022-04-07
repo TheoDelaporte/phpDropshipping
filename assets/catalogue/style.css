@@ -133,7 +133,7 @@ body.light-mode .video-bg:before {
 
 .app {
   background-color: var(--theme-bg-color);
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   overflow: hidden;
   backdrop-filter: blur(20px);

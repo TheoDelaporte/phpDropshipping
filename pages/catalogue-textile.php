@@ -54,7 +54,7 @@ include "../skeleton/backgroundvideo.php";
         <?php
         include "../skeleton/header.php";
         ?>
-        <div class="row no-gutters">
+        <div class="row no-gutters" style="margin:auto;margin-top: 27px;margin-bottom: 29px;">
             <?php
             foreach ($datas as $produit) {
                 $i++;
