@@ -29,12 +29,12 @@
       <div class="header-menu">
         <a class="menu-link is-active" href="pages/catalogue-technologie.php">Technologie</a>
         <a class="menu-link notify" href="pages/catalogue-deco.php">Déco</a>
-        <a class="menu-link" href="pages/catalogue-textile.php">Textile</a>
+        <a class="menu-link" href="pages/catalogue-voiture.php">Accessoires automobile</a>
         <a class="menu-link notify" href="pages/a-propos.php">Nous contacter</a>
       </div>
-      <div class="search-bar">
+      <!-- <div class="search-bar">
         <input type="text" placeholder="Rechercher">
-      </div>
+      </div> -->
 
       <!-- tester si l'utilisateur est connecté -->
       <?php
@@ -97,8 +97,12 @@
                   <center><img src="img/iphone.png" style="text-align:center;" height="150" width="150"></center>
                 </div>
                 <div class="app-card-buttons">
-                  <button class="content-button status-button">Commander</button>
-                  <div class="menu"></div>
+                  <a href="stripe-checkout/create-checkout-session.php?submitDirect=<?= 'price_1KiIldC2HVmN5XNHaqbebZ8c' ?>&prix=<?= 800 ?>&email=<?= $_SESSION['email'] ?>" class="content-button status-button">Commander</a>
+                  <form action="pages/produit.php" method="GET">
+                    <button type="submit" style="background: transparent;border: none !important;font-size:0;" name="produit" value="<?= 'price_1KiIldC2HVmN5XNHaqbebZ8c' ?>">
+                      <div class="menu"></div>
+                    </button>
+                  </form>
                 </div>
               </div>
               <div class="app-card">
@@ -109,44 +113,60 @@
                   <center><img src="img/rubanled.png" style="text-align:center;" height="150" width="150"></center>
                 </div>
                 <div class="app-card-buttons">
-                  <button class="content-button status-button">Commander</button>
-                  <div class="menu"></div>
+                  <a href="stripe-checkout/create-checkout-session.php?submitDirect=<?= 'price_1KiImxC2HVmN5XNHX0jWjXbm' ?>&prix=<?= 7 ?>&email=<?= $_SESSION['email'] ?>" class="content-button status-button">Commander</a>
+                  <form action="pages/produit.php" method="GET">
+                    <button type="submit" style="background: transparent;border: none !important;font-size:0;" name="produit" value="<?= 'price_1KiImxC2HVmN5XNHX0jWjXbm' ?>">
+                      <div class="menu"></div>
+                    </button>
+                  </form>
                 </div>
               </div>
               <div class="app-card">
                 <span>
-                  iPhone 11
+                  Clavier logitech
                 </span>
                 <div class="app-card__subtext">
-                  <center><img src="img/iphone.png" style="text-align:center;" height="150" width="150"></center>
+                  <center><img src="img/clavierlogitech.png" style="text-align:center;" height="150" width="150"></center>
                 </div>
                 <div class="app-card-buttons">
-                  <button class="content-button status-button">Commander</button>
-                  <div class="menu"></div>
+                  <a href="stripe-checkout/create-checkout-session.php?submitDirect=<?= 'price_1KixhgC2HVmN5XNHuump5ZZl' ?>&prix=<?= 50 ?>&email=<?= $_SESSION['email'] ?>" class="content-button status-button">Commander</a>
+                  <form action="pages/produit.php" method="GET">
+                    <button type="submit" style="background: transparent;border: none !important;font-size:0;" name="produit" value="<?= 'price_1KixhgC2HVmN5XNHuump5ZZl' ?>">
+                      <div class="menu"></div>
+                    </button>
+                  </form>
                 </div>
               </div>
               <div class="app-card">
                 <span>
-                  iPhone 11
+                  Enjoliveur 15" rouge
                 </span>
                 <div class="app-card__subtext">
-                  <center><img src="img/iphone.png" style="text-align:center;" height="150" width="150"></center>
+                  <center><img src="img/enjoliveur1.png" style="text-align:center;" height="150" width="150"></center>
                 </div>
                 <div class="app-card-buttons">
-                  <button class="content-button status-button">Commander</button>
-                  <div class="menu"></div>
+                  <a href="stripe-checkout/create-checkout-session.php?submitDirect=<?= 'price_1KlvsmC2HVmN5XNH6SmNFk0A' ?>&prix=<?= 20 ?>&email=<?= $_SESSION['email'] ?>" class="content-button status-button">Commander</a>
+                  <form action="pages/produit.php" method="GET">
+                    <button type="submit" style="background: transparent;border: none !important;font-size:0;" name="produit" value="<?= 'price_1KlvsmC2HVmN5XNH6SmNFk0A' ?>">
+                      <div class="menu"></div>
+                    </button>
+                  </form>
                 </div>
               </div>
               <div class="app-card">
                 <span>
-                  iPhone 11
+                  Appareil photo Canon
                 </span>
                 <div class="app-card__subtext">
-                  <center><img src="img/iphone.png" style="text-align:center;" height="150" width="150"></center>
+                  <center><img src="img/canon.png" style="text-align:center;" height="150" width="150"></center>
                 </div>
                 <div class="app-card-buttons">
-                  <button class="content-button status-button">Commander</button>
-                  <div class="menu"></div>
+                  <a href="stripe-checkout/create-checkout-session.php?submitDirect=<?= 'price_1KixhKC2HVmN5XNHIJ8t6J4l' ?>&prix=<?= 450 ?>&email=<?= $_SESSION['email'] ?>" class="content-button status-button">Commander</a>
+                  <form action="pages/produit.php" method="GET">
+                    <button type="submit" style="background: transparent;border: none !important;font-size:0;" name="produit" value="<?= 'price_1KixhKC2HVmN5XNHIJ8t6J4l' ?>">
+                      <div class="menu"></div>
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>

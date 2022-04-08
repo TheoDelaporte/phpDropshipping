@@ -69,9 +69,14 @@ include "../skeleton/backgroundvideo.php";
                         </div>
                         <div class="app-card-buttons">
                             <a href="../stripe-checkout/create-checkout-session.php?submitDirect=<?= $produit['idProduit'] ?>&prix=<?= $produit['prixHT'] ?>&email=<?= $_SESSION['email'] ?>" class="content-button status-button">Commander</a>
-                            <form action="produit.php" method="GET">
-                                <button type="submit" class="menu" name="produit" value="<?= $produit['idProduit'] ?>"></button>
-                            </form>
+                            <!-- <form action="produit.php" method="GET">
+                                <button type="submit" style="background: transparent;border: none !important;font-size:0;" name="produit" value="<?= $produit['idProduit'] ?>">
+                                    <div class="menu"></div>
+                                </button>
+                            </form> -->
+                            <a href="produit.php?produit=<?= $produit['idProduit'] ?>">
+                                <div class="menu"></div>
+                            </a>
                         </div>
                     </div>
                 </div>

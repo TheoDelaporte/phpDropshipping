@@ -97,9 +97,9 @@ if ($count == 1) {
 <body>
   <section>
     <p>
-      Paiement effectué !
-      <a href="../../index.php?url=success">Retourner à l'accueil</a>.
-    </p>
+      Paiement effectué ! </p>
+    <a style="text-align: center" href="../../index.php?url=success">Retourner à l'accueil</a>.
+
   </section>
 </body>
 

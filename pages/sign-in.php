@@ -30,7 +30,7 @@
             <div class="background">
                 <div class="app-card-login">
                     <div class="grid">
-                        <form action="../connexion.php" method="POST" class="form login">
+                        <form action="../inscription.php" method="POST" class="form login">
                             <div class="connecter"> Inscription </div>
                             <div class="form__field">
                                 <label for="email"><svg class="icon">
@@ -49,7 +49,7 @@
                             <br>
 
                             <div class="form__field">
-                                <input type="submit" name="connexion" value="Me connecter" />
+                                <input type="submit" name="connexion" value="M'inscrire" />
                             </div>
                         </form>
 
