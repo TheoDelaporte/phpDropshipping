@@ -21,7 +21,7 @@
     <?php
     include "../skeleton/backgroundvideo.php"
     ?>
-    <div class="app" style="display:flex;">
+    <div class="app" style="display:flex;width:100%;">
         <?php
         include "../skeleton/header.php"
         ?>
