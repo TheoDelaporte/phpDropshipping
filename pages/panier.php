@@ -77,6 +77,7 @@ if ($url == '/pages/panier.php') {
         <title>Panier</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
         <link rel="stylesheet" href="../assets/panier/style.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="../img/logo_clickshop.png">
 
     </head>
 

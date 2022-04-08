@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'>
     <link rel="stylesheet" href="../openStreetMap/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/logo_clickshop.png">
     <style>
         #maCarte {
             height: 60vh;

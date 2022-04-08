@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../assets/produit/style.css" />
     <link rel="stylesheet" href="../assets/login/style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/logo_clickshop.png">
 </head>
 <?php
 include "../skeleton/backgroundvideo.php";
