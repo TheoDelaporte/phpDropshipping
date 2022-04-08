@@ -42,7 +42,7 @@ include "../skeleton/backgroundvideo.php";
 
 <head>
     <meta charset="UTF-8" />
-    <title>Connexion</title>
+    <title>Automobile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/catalogue/style.css" />
