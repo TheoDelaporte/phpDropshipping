@@ -5,12 +5,12 @@
     <div class="header-menu">
         <a class="menu-link" href="catalogue-technologie.php">Technologie</a>
         <a class="menu-link notify" href="catalogue-deco.php">Déco</a>
-        <a class="menu-link" href="catalogue-textile.php">Textile</a>
+        <a class="menu-link" href="catalogue-voiture.php">Accessoires automobile</a>
         <a class="menu-link notify" href="a-propos.php">Nous contacter</a>
     </div>
-    <div class="search-bar">
+    <!-- <div class="search-bar">
         <input type="text" placeholder="Search" />
-    </div>
+    </div> -->
     <div class="header-profile">
         <!-- tester si l'utilisateur est connecté -->
         <?php

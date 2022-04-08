@@ -13,7 +13,7 @@
 <?php
 include "../skeleton/backgroundvideo.php";
 ?>
-<div class="app">
+<div class="app" style="width:100%; height:100%">
     <?php
     include "../skeleton/header.php";
     include "../confBd/config.php";
@@ -27,17 +27,11 @@ include "../skeleton/backgroundvideo.php";
     $calculProduit = ((int)$produit['prixHT'] * 1.4);
     // ((int)$item['quantity'] * (int)$product['price']);
     ?>
-    <div class="container">
+    <div class="container" style="padding: 2%">
         <!--   https://www.jerecho.com/codepen/nike-product-page/ -->
         <div class="product-image">
             <!-- <img src="../img/<?= $produit['imageProduit'] ?>" alt="" class="product-logo"> -->
             <img src="../img/<?= $produit['imageProduit'] ?>" alt="" class="product-pic">
-            <div class="dots">
-                <a href="#!" class="active"><i>1</i></a>
-                <a href="#!"><i>2</i></a>
-                <a href="#!"><i>3</i></a>
-                <a href="#!"><i>4</i></a>
-            </div>
         </div>
 
         <div class="product-details">
@@ -53,25 +47,13 @@ include "../skeleton/backgroundvideo.php";
                 <h5>Description</h5>
                 <p><?= $produit['descriptionProduit'] ?></p>
             </article>
-            <div class="controls">
-                <div type="hidden" class="color">
-                </div>
-                <div class="size">
-                    <h5>size</h5>
-                    <a href="#!" class="option">(UK 8)</a>
-                </div>
-                <div class="qty">
-                    <h5>qty</h5>
-                    <a href="#!" class="option">(1)</a>
-                </div>
-            </div>
+
             <div class="footer">
-                <a style='' href="panier.php?action=ajout&amp;l=<?= $produit['libelleProduit'] ?>&amp;q=1&amp;p=<?= $produit['prixHT'] ?>">Ajouter au panier</a>
+                <!-- <a style='' href="panier.php?action=ajout&amp;l=<?= $produit['libelleProduit'] ?>&amp;q=1&amp;p=<?= $produit['prixHT'] ?>">Ajouter au panier</a> -->
                 <button type="button">
-                    <img src="http://co0kie.github.io/codepen/nike-product-page/cart.png" alt="">
-                    <span>Ajouter au panier</span>
+                    <a style='' href="panier.php?action=ajout&amp;l=<?= $produit['libelleProduit'] ?>&amp;q=1&amp;p=<?= $produit['prixHT'] ?>">Ajouter au panier</a>
                 </button>
-                <a href="#!"><img src="http://co0kie.github.io/codepen/nike-product-page/share.png" alt=""></a>
+                <!-- <a href="#!"><img src="http://co0kie.github.io/codepen/nike-product-page/share.png" alt=""></a> -->
             </div>
         </div>
 

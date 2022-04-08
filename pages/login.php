@@ -58,7 +58,7 @@
                             <br>
 
                             <div class="form__field">
-                                <input type="submit" name="connexion" value="M'inscire" />
+                                <input type="submit" name="connexion" value="Me connecter" />
                             </div>
                         </form>
 
