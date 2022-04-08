@@ -47,6 +47,7 @@ include "../skeleton/backgroundvideo.php";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/catalogue/style.css" />
     <link rel="stylesheet" href="../assets/login/style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/logo_clickshop.png">
 </head>
 
 <body>
